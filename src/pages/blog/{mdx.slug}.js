@@ -1,9 +1,12 @@
 // Step 1: Import React
 import * as React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../../components/layout'
+import {
+  ctaButton,
+} from '../../components/layout.module.css'
 
 const BlogPost = ({ data }) => {
   const image = getImage(data.mdx.frontmatter.hero_image)
@@ -23,6 +26,7 @@ const BlogPost = ({ data }) => {
       <MDXRenderer>
         {data.mdx.body}
       </MDXRenderer>
+      <p><Link className={ctaButton} to="/blog">Back to Blog</Link></p>
     </Layout>
   )
 }

@@ -25,3 +25,16 @@
   font-weight: 700;
   margin: 3rem 0;
 }
+
+.cta-button {
+  display:  inline-block;
+  padding:  10px 15px;
+  text-decoration: none;
+  color:  inherit;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+      border-color:  black;
+}
